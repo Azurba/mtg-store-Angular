@@ -1,0 +1,40 @@
+<!--This is from Angular material import. Pre-defined things made by Angular-->
+<!-- set the mat-toolbar to max width -->
+
+<!-- Check-out the app.module.ts with all the imports of all the Angular materials we're using -->
+<mat-toolbar class="max-w mx-auto border-x justify-between">
+    <a routerLink="home">Azurba's MTG Store</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon
+            [matBadge]="1"
+            matBadgeColor="warn"
+        >shopping_cart</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <div class="p-3 divide-y divide-solid">
+            <div class="pb-3 flex justify-between">
+                <span class="mr-16">1 Items</span>
+                <a routerLink="cart">View Cart</a>
+            </div>
+            <div class="py-3">
+                <div class="flex justify-between font-light mb-2">
+                    1x Gishath 
+                    <span class="font-bold">{{ '40' | currency}}</span>
+                </div>
+            </div>
+            <div class="flex justify-between py-3">
+                Total:
+                <span class="font-bold">{{'40' | currency}}</span>
+            </div>
+            <div class="pt-3 flex justify-between">
+                <button class="bg-rose-600 text-whote rounded-full w-9 h-9">
+                    <mat-icon>remove_shopping_cart</mat-icon>
+                </button>
+                <button routerLink="cart" class="bg-green-600 text-whote rounded-full w-9 h-9">
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+            </div>
+            
+        </div>
+    </mat-menu>
+</mat-toolbar>
