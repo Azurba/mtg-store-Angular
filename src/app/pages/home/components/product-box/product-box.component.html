@@ -1,11 +1,11 @@
-<mat-card class="tex-center">
-    <div>
-        <img class="mb-1 mx-auto h-[200px]" src="https://via.placeholder.com/150">
-        <div class="w-full">
+<mat-card [ngClass]="{'text-center' : !fullWidthMode}">
+    <div [ngClass]="{flex: fullWidthMode}">
+        <img class="mb-1 mx-auto h-[200px]" src="https://via.placeholder.com/150" [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]' : fullWidthMode }">
+        <div class="w-full" [ngClass]="{'px-8 flex flex-col justify-between' : fullWidthMode}">
             <div>
                 <h5>Creature</h5>
                 <p class="truncate hover:whitespace-normal">Gishath Sun's Avatar</p>
-                <p>Description</p>
+                <p *ngIf="fullWidthMode">Description</p>
             </div>
         </div>
         <div class="flex justify-between">
