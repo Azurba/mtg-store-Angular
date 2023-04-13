@@ -10,7 +10,8 @@
         </div>
         <div class="flex justify-between">
             <span class="text-red-400">{{'40' | currency}}</span>
-            <button>
+            <!-- When this btn is clicked, go to product-box.component.ts -->
+            <button (click)="onAddToCart()">
                 <mat-icon class="text-gray-500">shopping_cart</mat-icon>
             </button>
         </div>

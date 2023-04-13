@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -53,14 +54,17 @@ export class CartComponent {
 
   ];
 
+  constructor(private cartService : CartService) {
+    
+    
+  }
+
   ngOnInit(): void {
     this.dataSource = this.cart.items
   }
 
-  // The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous 
-  // step (this result is the running sum of all the previous steps) — until there are no more elements to add.
   getTotal(items : Array<CartItem>) : number{
-    return items.map((item) => item.price * item.quantity).reduce((prev, current) => prev + current, 0)
+    return this.cartService.getTotal(items);
   }
 
 }
