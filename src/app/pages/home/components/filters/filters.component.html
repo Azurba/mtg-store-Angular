@@ -1,8 +1,8 @@
 <!-- show mat-spansion-panel if the categories property exists / is not empty -->
 <mat-expansion-panel *ngIf="categories">
-<mat-expansion-panel-header>
-    <mat-panel-title>Card Types</mat-panel-title>
-</mat-expansion-panel-header>
+<!-- <mat-expansion-panel-header> -->
+    <!-- <mat-panel-title>Card Types</mat-panel-title> -->
+<!-- </mat-expansion-panel-header> -->
 <!-- [multiple]=false = we can only pick one category at a time -->
 <mat-selection-list [multiple]="false">
     <mat-list-option *ngFor="let category of categories" [value]="category">

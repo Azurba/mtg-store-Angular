@@ -1,15 +1,16 @@
-<mat-card [ngClass]="{'text-center' : !fullWidthMode}">
+<mat-card *ngIf="product" [ngClass]="{'text-center' : !fullWidthMode}">
     <div [ngClass]="{flex: fullWidthMode}">
-        <img class="mb-1 mx-auto h-[200px]" src="https://via.placeholder.com/150" [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]' : fullWidthMode }">
+        <img class="mb-1 mx-auto h-[200px]" src="{{product.image}}" 
+        [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]' : fullWidthMode }">
         <div class="w-full" [ngClass]="{'px-8 flex flex-col justify-between' : fullWidthMode}">
             <div>
-                <h5>Creature</h5>
-                <p class="truncate hover:whitespace-normal">Gishath Sun's Avatar</p>
-                <p *ngIf="fullWidthMode">Description</p>
+                <h5>{{product.type}}</h5>
+                <p class="truncate hover:whitespace-normal">{{product.name}}</p>
+                <p *ngIf="fullWidthMode">{{product.description}}</p>
             </div>
         </div>
         <div class="flex justify-between">
-            <span class="text-red-400">{{'40' | currency}}</span>
+            <span class="text-red-400">{{product.price | currency}}</span>
             <!-- When this btn is clicked, go to product-box.component.ts -->
             <button (click)="onAddToCart()">
                 <mat-icon class="text-gray-500">shopping_cart</mat-icon>

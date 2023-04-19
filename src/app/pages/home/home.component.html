@@ -8,12 +8,13 @@
         "onColumnsCountChange" is the name of the event handler function in the home.component.ts -->
         <app-products-header (columnsCountChange)="onColumnsCountChange($event)"></app-products-header>
         <mat-grid-list gutterSize="16" [cols]="columns" [rowHeight]="rowHeight">
-            <mat-grid-tile>
+            <mat-grid-tile *ngFor="let product of products">
                 <!-- Here we receive the output decorator from child and redirect it to home.component.ts -->
                 <app-product-box  
                     (addToCart)="onAddToCart($event)"
                     class="w-full" 
-                    [fullWidthMode]="columns === 1">
+                    [fullWidthMode]="columns === 1"
+                    [product]="product">
                 </app-product-box>
             </mat-grid-tile>
         </mat-grid-list>

@@ -61,10 +61,37 @@ export class CartComponent {
 
   ngOnInit(): void {
     this.dataSource = this.cart.items
+    //subscribed the cart when a new item is added
+    //The subscribe is going to receibe a cart back 
+    //and we're going to add data on it
+    this.cartService.cart.subscribe((_cart: Cart) => {
+      this.cart = _cart;
+      this.dataSource = this.cart.items;
+    })
   }
 
   getTotal(items : Array<CartItem>) : number{
     return this.cartService.getTotal(items);
+  }
+
+  onClearCart(){
+    this.cartService.clearCart();
+  }
+
+  onRemoveItem(item: CartItem) : void{
+    this.cartService.removeFromCart(item);
+  }
+
+  onAddQuantity(item : CartItem) : void{
+    this.cartService.addToCart(item);
+  }
+
+  onRemoveQuantity(item : CartItem) : void {
+    this.cartService.removeQuantity(item)
+  }
+
+  checkOutClicked() : void {
+    this.cartService.checkOutClicked();
   }
 
 }

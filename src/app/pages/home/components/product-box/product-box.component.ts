@@ -12,15 +12,7 @@ export class ProductBoxComponent {
   //Input receives data from parent
   @Input() fullWidthMode = false;
   @Output() addToCart = new EventEmitter();
-
-  product: Product | undefined = {
-    id: 1,
-    name: 'Forest',
-    price: 0.80,
-    type: 'Land',
-    description: 'Description',
-    image: 'https://tools.toywiz.com/_images/_webp/_products/lg/mtgdominariaunited281forestfoil.webp'
-  };
+  @Input() product: Product | undefined;
 
   //We are emitting to the parent an event = we're sending the product to the parent
   //When the user click on the "shopping cart" button of the product card, this will be triggered

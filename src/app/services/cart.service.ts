@@ -46,4 +46,34 @@ export class CartService {
     this._snackBar.open("Cart is empty", "Ok", {duration: 3000})
   }
 
+  removeFromCart(item : CartItem) : void {
+    //iterate over all the items currently in the cart, check all the items that does not have
+    //the same id of the item to be removed. All of these will remain in the cart
+    const filteredItems = this.cart.value.items.filter(
+      (_item) => _item.id !== item.id
+    );
+    
+    //update the cart with all the items that "passed"
+    this.cart.next( { items: filteredItems });
+
+    //let the user know with a snackBar
+    this._snackBar.open("1 item removed from cart", "Ok", {duration: 3000});
+  }
+
+  removeQuantity(item : CartItem) : void {
+    this.cart.value.items.map((_item) => {
+      if(_item.id === item.id){
+        _item.quantity--;
+        if(_item.quantity === 0){
+          this.removeFromCart(_item);
+        }
+      }
+      this._snackBar.open("1 item removed from cart", "Ok", {duration: 3000});
+    })
+  }
+
+  checkOutClicked() : void {
+    this._snackBar.open("This is a Mock Button. There is no functionality", "Ok", {duration: 3000});
+  }
+
 }
