@@ -1,27 +1,11 @@
 # Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## Video
 
-## Development server
+## Pictures
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![5](https://github.com/Azurba/mtg-store-Angular/assets/58566178/1800e122-7543-4ded-ab1b-198869733225)
+![6](https://github.com/Azurba/mtg-store-Angular/assets/58566178/1d85fa72-e137-41c4-aa6e-f460f9a0dd2a)
+![7](https://github.com/Azurba/mtg-store-Angular/assets/58566178/d47a1cd4-a918-4526-958a-8b272ef76389)
+![8](https://github.com/Azurba/mtg-store-Angular/assets/58566178/f468d213-8759-4449-805b-ee014dc30a8c)
+![9](https://github.com/Azurba/mtg-store-Angular/assets/58566178/16ad4a77-3dc0-4441-80a9-3a780161cd9e)
