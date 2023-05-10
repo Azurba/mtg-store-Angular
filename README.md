@@ -2,6 +2,8 @@
 
 ## Video
 
+[Click here to Watch the Video](https://youtu.be/c6cAXTVjE6Y)
+
 ## Pictures
 
 ![5](https://github.com/Azurba/mtg-store-Angular/assets/58566178/1800e122-7543-4ded-ab1b-198869733225)
